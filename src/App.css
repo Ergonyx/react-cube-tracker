@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.header{
+  color: crimson;
+}
+
+td:first-of-type {
+  white-space:nowrap;
+}
+
+tr:nth-child(2n) {
+  background: #ddd;
+}
