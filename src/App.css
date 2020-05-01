@@ -1,5 +1,12 @@
 .App {
-  text-align: center;
+text-align: center;
+}
+
+.AppTwo {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -46,5 +53,14 @@ td:first-of-type {
 }
 
 tr:nth-child(2n) {
-  background: #ddd;
+  background: #eee;
+}
+
+.classButtons {
+  margin: 20px 0;
+}
+.classButtons button {
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 700;
 }

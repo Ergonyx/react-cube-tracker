@@ -1,5 +1,6 @@
 {
   "name": "cube-tracker",
+  "homepage": "https://alexrichardson.ca/projects/cubetracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
