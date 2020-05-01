@@ -9,6 +9,7 @@ class DiabloItems extends Component {
         state = {
             posts: posts.Items,
             formattedPosts: posts.Items,
+            savedItems: posts.Items,
             currentSelection: "all"
         };
     
@@ -47,6 +48,21 @@ class DiabloItems extends Component {
                 currentSelection: "all"
             })
         }
+        const saveItem = (ID) => {
+            let savedItems = {...this.state.posts};
+            let item = savedItems[ID];
+            if (item.S === false) {
+                item.S = true;
+            }
+            else {
+                item.S = false;
+            }
+            // item.S = true;
+            this.setState({
+                savedItems: savedItems
+            })
+            console.log(this.state)
+        }
 
         return(
             <div>
@@ -82,6 +98,7 @@ class DiabloItems extends Component {
                                         <td>{item.SubType}</td>
                                         <td>{formatText(item.Description)}</td>
                                         <td>{item.Class}</td>
+                                        <td><button style={item.S === false ? {backgroundColor: "#ec5f5f"} : {backgroundColor: "#2acB52"}} onClick={() => saveItem(item.ID)}>SAVE</button></td>
                                     </tr>
                                 ))
                             }
